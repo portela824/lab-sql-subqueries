@@ -10,12 +10,6 @@ SELECT COUNT(*) AS copies FROM film f
 JOIN inventory i ON f.film_id = i.film_id
 WHERE f.title = 'Hunchback Impossible';
 
-SELECT COUNT(*) AS num_copies
-FROM inventory
-WHERE film_id = (SELECT film_id FROM film WHERE title = 'Hunchback Impossible');
-
-
-
 /*2.List all films whose length is longer than the average length of all the films in the Sakila database.*/
 SELECT * FROM film;
 
